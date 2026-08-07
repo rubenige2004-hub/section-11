@@ -26,4 +26,5 @@ jobs:
         env:
           INTERVALS_ICU_API_KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
           INTERVALS_ICU_ATHLETE_ID: ${{ secrets.INTERVALS_ICU_ATHLETE_ID }}
-        run: python examples/json-auto-sync/sync.py --output dossier.json
+        run: python sync.py --output dossier.json
+
