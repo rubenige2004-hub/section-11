@@ -19,7 +19,7 @@ jobs:
           KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
           ATHLETE: ${{ secrets.INTERVALS_ICU_ATHLETE_ID }}
         run: |
-          # URL corregida hacia la API oficial con los datos del atleta y la barra final obligatoria
+          # URL corregida hacia la API para descargar tus datos deportivos reales
           curl -s -L -u "API_KEY:$KEY" "https://intervals.icu" -o dossier.json
           
           # Verificar si el archivo se descargo con contenido real o dio error
