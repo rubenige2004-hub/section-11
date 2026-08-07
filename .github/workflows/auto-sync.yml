@@ -1,4 +1,4 @@
-name: Auto-Sync Intervals.icu Data
+name: Sincronizacion Sin Bloqueos
 on:
   schedule:
     - cron: '0 */6 * * *'
@@ -25,20 +25,26 @@ jobs:
       - name: Write Sync Script
         run: |
           cat << 'EOF' > inline_sync.py
-          import json, os, requests
+          import json, os, requests, sys
           
           if __name__ == "__main__":
               api_key = os.environ.get("INTERVALS_ICU_API_KEY")
-              athlete_id = os.environ.get("INTERVALS_ICU_ATHLETE_ID")
               
-              if not api_key or not athlete_id:
-                  raise Exception("Faltan las credenciales en los secretos de GitHub")
+              if not api_key or len(sys.argv) < 2:
+                  raise Exception("Faltan credenciales o argumentos de ejecucion.")
               
-              # Corregido: Se añade la barra final '/' para evitar que el ID se pegue al dominio
+              athlete_id = sys.argv[1]
+              
+              # Direccion limpia construida mediante argumentos puros
               url = f"https://intervals.icu{athlete_id}/wellness"
               
-              # Autenticación oficial usando API_KEY como usuario y tu clave como contraseña
-              response = requests.get(url, auth=('API_KEY', api_key))
+              # Peticion usando cabecera de User-Agent simulando navegador para evitar bloqueos de Cloudflare
+              headers = {
+                  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                  "accept": "application/json"
+              }
+              
+              response = requests.get(url, auth=('API_KEY', api_key), headers=headers)
               
               if response.status_code != 200:
                   raise Exception(f"Error de Intervals.icu: Codigo {response.status_code}.")
@@ -46,14 +52,13 @@ jobs:
               data = response.json()
               with open("dossier.json", "w") as f:
                   json.dump(data, f, indent=4)
-              print("Datos deportivos guardados con éxito")
+              print("Datos deportivos sincronizados correctamente.")
           EOF
 
       - name: Run Sync Script
         env:
           INTERVALS_ICU_API_KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
-          INTERVALS_ICU_ATHLETE_ID: ${{ secrets.INTERVALS_ICU_ATHLETE_ID }}
-        run: python inline_sync.py
+        run: python inline_sync.py "${{ secrets.INTERVALS_ICU_ATHLETE_ID }}"
 
       - name: Commit and Push dossier.json
         run: |
