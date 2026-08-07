@@ -27,6 +27,7 @@ jobs:
           cat << 'EOF' > inline_sync.py
           import argparse, json, os, requests
           def fetch_data(api_key, athlete_id):
+              # Corregido a la dirección oficial de la API: api.intervals.icu
               url = f"https://intervals.icu{athlete_id}/wellness"
               headers = {"Authorization": f"Bearer {api_key}"}
               res = requests.get(url, headers=headers)
