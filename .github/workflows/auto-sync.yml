@@ -14,47 +14,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Write Sync Script
+      - name: Descargar Datos de Intervals
+        env:
+          KEY: ${{ secrets.INTERVALS_ICU_API_KEY }}
+          ATHLETE: ${{ secrets.INTERVALS_ICU_ATHLETE_ID }}
         run: |
-          cat << 'EOF' > inline_sync.py
-          import argparse, json, requests
+          # Usamos curl nativo para evitar que la consola intercepte la URL construida
+          curl -s -u "API_KEY:$KEY" "https://intervals.icu" -o dossier.json
           
-          if __name__ == "__main__":
-              parser = argparse.ArgumentParser()
-              parser.add_argument("--key", required=True)
-              parser.add_argument("--athlete", required=True)
-              args = parser.parse_args()
-              
-              # La URL se mantiene 100% estatica y limpia de variables para esquivar la censura de GitHub
-              url = f"https://intervals.icu{args.athlete}/wellness"
-              
-              response = requests.get(url, auth=('API_KEY', args.key))
-              
-              if response.status_code != 200:
-                  raise Exception(f"Error de Intervals.icu: Codigo {response.status_code}.")
-                  
-              data = response.json()
-              with open("dossier.json", "w") as f:
-                  json.dump(data, f, indent=4)
-              print("Sincronizacion completada con exito.")
-          EOF
-
-      - name: Run Sync Script
-        run: python inline_sync.py --key "${{ secrets.INTERVALS_ICU_API_KEY }}" --athlete "${{ secrets.INTERVALS_ICU_ATHLETE_ID }}"
+          # Verificar si el archivo se descargo con contenido real o dio error
+          if [ ! -s dossier.json ]; then
+            echo "Error: El archivo dossier.json quedo vacio."
+            exit 1
+          fi
 
       - name: Commit and Push dossier.json
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add dossier.json
           git commit -m "Automated update of Intervals.icu data" || exit 0
           git push
-
