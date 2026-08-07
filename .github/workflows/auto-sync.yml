@@ -25,24 +25,29 @@ jobs:
       - name: Write Sync Script
         run: |
           cat << 'EOF' > inline_sync.py
-          import argparse, json, os, requests
-          def fetch_data(api_key, athlete_id):
-              # Corregido a la dirección oficial de la API: api.intervals.icu
-              url = f"https://intervals.icu{athlete_id}/wellness"
-              headers = {"Authorization": f"Bearer {api_key}"}
-              res = requests.get(url, headers=headers)
-              if res.status_code != 200:
-                  raise Exception(f"Error Intervals.icu: {res.status_code}")
-              return res.json()
+          import json, os, requests
+          
           if __name__ == "__main__":
               api_key = os.environ.get("INTERVALS_ICU_API_KEY")
               athlete_id = os.environ.get("INTERVALS_ICU_ATHLETE_ID")
+              
               if not api_key or not athlete_id:
-                  raise Exception("Faltan credenciales en Secrets")
-              data = fetch_data(api_key, athlete_id)
+                  raise Exception("Faltan las credenciales en los secretos de GitHub")
+              
+              # URL limpia e independiente para evitar que los asteriscos de GitHub la rompan
+              url = f"https://intervals.icu{athlete_id}/wellness"
+              
+              # Autenticación correcta para Intervals.icu (Usuario API y Clave)
+              # Intervals usa el texto 'API_KEY' como usuario y tu clave como contraseña
+              response = requests.get(url, auth=('API_KEY', api_key))
+              
+              if response.status_code != 200:
+                  raise Exception(f"Error de Intervals.icu: Codigo {response.status_code}. Revisa que tus secretos esten bien creados.")
+                  
+              data = response.json()
               with open("dossier.json", "w") as f:
                   json.dump(data, f, indent=4)
-              print("Datos guardados con éxito en dossier.json")
+              print("Datos deportivos guardados con éxito en dossier.json")
           EOF
 
       - name: Run Sync Script
@@ -58,4 +63,3 @@ jobs:
           git add dossier.json
           git commit -m "Automated update of Intervals.icu data" || exit 0
           git push
-
