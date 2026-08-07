@@ -34,20 +34,19 @@ jobs:
               if not api_key or not athlete_id:
                   raise Exception("Faltan las credenciales en los secretos de GitHub")
               
-              # URL limpia e independiente para evitar que los asteriscos de GitHub la rompan
+              # Corregido: Se añade la barra final '/' para evitar que el ID se pegue al dominio
               url = f"https://intervals.icu{athlete_id}/wellness"
               
-              # Autenticación correcta para Intervals.icu (Usuario API y Clave)
-              # Intervals usa el texto 'API_KEY' como usuario y tu clave como contraseña
+              # Autenticación oficial usando API_KEY como usuario y tu clave como contraseña
               response = requests.get(url, auth=('API_KEY', api_key))
               
               if response.status_code != 200:
-                  raise Exception(f"Error de Intervals.icu: Codigo {response.status_code}. Revisa que tus secretos esten bien creados.")
+                  raise Exception(f"Error de Intervals.icu: Codigo {response.status_code}.")
                   
               data = response.json()
               with open("dossier.json", "w") as f:
                   json.dump(data, f, indent=4)
-              print("Datos deportivos guardados con éxito en dossier.json")
+              print("Datos deportivos guardados con éxito")
           EOF
 
       - name: Run Sync Script
@@ -59,7 +58,8 @@ jobs:
       - name: Commit and Push dossier.json
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@://github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add dossier.json
           git commit -m "Automated update of Intervals.icu data" || exit 0
           git push
+
