@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T04:29:52.190491",
+  "generated_at": "2026-08-12T08:50:45.966024",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1370,6 +1370,110 @@
         }
       ],
       "zone_basis": "hr"
+    },
+    {
+      "activity_id": "i175004623",
+      "date": "2026-08-12",
+      "start_datetime": "2026-08-12T07:56:20",
+      "type": "Run",
+      "name": "Zaragoza Carrera",
+      "interval_summary": [
+        "6x 6m34s 133bpm",
+        "1x 81s 136bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 393,
+          "moving_secs": 393,
+          "start_secs": 0,
+          "end_secs": 393,
+          "avg_hr": 122,
+          "max_hr": 132,
+          "min_hr": 95,
+          "avg_cadence": 83.28244,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 377,
+          "moving_secs": 377,
+          "start_secs": 393,
+          "end_secs": 770,
+          "avg_hr": 132,
+          "max_hr": 140,
+          "min_hr": 125,
+          "avg_cadence": 82.490715,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 403,
+          "moving_secs": 403,
+          "start_secs": 770,
+          "end_secs": 1173,
+          "avg_hr": 135,
+          "max_hr": 149,
+          "min_hr": 128,
+          "avg_cadence": 84.19355,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 399,
+          "moving_secs": 399,
+          "start_secs": 1173,
+          "end_secs": 1572,
+          "avg_hr": 135,
+          "max_hr": 151,
+          "min_hr": 128,
+          "avg_cadence": 80.77945,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 388,
+          "moving_secs": 388,
+          "start_secs": 1572,
+          "end_secs": 1960,
+          "avg_hr": 135,
+          "max_hr": 145,
+          "min_hr": 129,
+          "avg_cadence": 84.57217,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "394s@133bpm83rpm",
+          "duration_secs": 401,
+          "moving_secs": 401,
+          "start_secs": 1960,
+          "end_secs": 2361,
+          "avg_hr": 136,
+          "max_hr": 143,
+          "min_hr": 131,
+          "avg_cadence": 83.55611,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "81s@136bpm83rpm",
+          "duration_secs": 81,
+          "moving_secs": 81,
+          "start_secs": 2361,
+          "end_secs": 2442,
+          "avg_hr": 136,
+          "max_hr": 139,
+          "min_hr": 134,
+          "avg_cadence": 83.34568,
+          "zone": 1
+        }
+      ]
     }
   ],
   "fetch_state": {
@@ -1503,12 +1607,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 4,
+        "attempts": 5,
         "first_seen": "2026-08-11T18:04:02.008131",
-        "last_attempt": "2026-08-12T04:29:52.190491",
+        "last_attempt": "2026-08-12T08:50:45.966024",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-12T04:34:52.190491"
+        "next_retry_at": "2026-08-12T08:55:45.966024"
+      }
+    },
+    "i175004623": {
+      "date": "2026-08-12",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-12T08:50:45.966024",
+        "last_attempt": "2026-08-12T08:50:45.966024",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-12T08:50:45.966024",
+        "last_attempt": "2026-08-12T08:50:45.966024",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-12T08:55:45.966024"
       }
     }
   }
