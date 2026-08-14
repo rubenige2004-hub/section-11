@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T15:10:28.490305",
+  "generated_at": "2026-08-14T18:09:06.495849",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -1675,6 +1675,60 @@
           "zone": 3
         }
       ]
+    },
+    {
+      "activity_id": "i175824483",
+      "date": "2026-08-14",
+      "start_datetime": "2026-08-14T17:05:42",
+      "type": "Swim",
+      "name": "Nataci\u00f3n en piscina",
+      "interval_summary": [
+        "1x 200m 123bpm",
+        "1x 200m 143bpm",
+        "1x 200m 154bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "216s@123bpm29rpm",
+          "duration_secs": 216,
+          "moving_secs": 216,
+          "start_secs": 0,
+          "end_secs": 216,
+          "avg_hr": 123,
+          "max_hr": 142,
+          "min_hr": 82,
+          "avg_cadence": 28.748768,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "239s@143bpm26rpm",
+          "duration_secs": 239,
+          "moving_secs": 239,
+          "start_secs": 216,
+          "end_secs": 455,
+          "avg_hr": 143,
+          "max_hr": 158,
+          "min_hr": 128,
+          "avg_cadence": 25.889423,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "210s@154bpm25rpm",
+          "duration_secs": 210,
+          "moving_secs": 210,
+          "start_secs": 455,
+          "end_secs": 665,
+          "avg_hr": 154,
+          "max_hr": 177,
+          "min_hr": 129,
+          "avg_cadence": 25.009523,
+          "zone": 2
+        }
+      ],
+      "zone_basis": "hr"
     }
   ],
   "fetch_state": {
@@ -1824,12 +1878,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 15,
+        "attempts": 16,
         "first_seen": "2026-08-12T08:50:45.966024",
-        "last_attempt": "2026-08-14T12:00:59.956624",
+        "last_attempt": "2026-08-14T18:09:06.495849",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-14T18:00:59.956624"
+        "next_retry_at": "2026-08-15T00:09:06.495849"
       }
     },
     "i175360810": {
@@ -1842,12 +1896,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 11,
+        "attempts": 12,
         "first_seen": "2026-08-13T09:43:02.457263",
-        "last_attempt": "2026-08-14T15:10:28.490305",
+        "last_attempt": "2026-08-14T18:09:06.495849",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-14T15:40:28.490305"
+        "next_retry_at": "2026-08-14T18:39:06.495849"
+      }
+    },
+    "i175824483": {
+      "date": "2026-08-14",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-08-14T18:09:06.495849",
+        "last_attempt": "2026-08-14T18:09:06.495849",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-08-14T18:09:06.495849",
+        "last_attempt": "2026-08-14T18:09:06.495849",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-08-14T18:14:06.495849"
       }
     }
   }
