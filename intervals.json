@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-20T23:54:00.986966",
+  "generated_at": "2026-08-21T03:30:28.940586",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -174,81 +174,6 @@
           "zone": 1
         }
       ]
-    },
-    {
-      "activity_id": "i173113289",
-      "date": "2026-08-06",
-      "start_datetime": "2026-08-06T16:49:14",
-      "type": "Swim",
-      "name": "Nataci\u00f3n en piscina",
-      "interval_summary": [
-        "1x 366m 143bpm",
-        "2x 83m 134bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "301s@143bpm27rpm",
-          "duration_secs": 301,
-          "moving_secs": 301,
-          "start_secs": 0,
-          "end_secs": 301,
-          "avg_hr": 143,
-          "max_hr": 155,
-          "min_hr": 102,
-          "avg_cadence": 26.900331,
-          "zone": 1
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 33,
-          "moving_secs": 33,
-          "start_secs": 301,
-          "end_secs": 334,
-          "avg_hr": 144,
-          "max_hr": 156,
-          "min_hr": 129,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "83s@134bpm24rpm",
-          "duration_secs": 80,
-          "moving_secs": 80,
-          "start_secs": 334,
-          "end_secs": 414,
-          "avg_hr": 140,
-          "max_hr": 157,
-          "min_hr": 125,
-          "avg_cadence": 24.0375,
-          "zone": 1
-        },
-        {
-          "type": "RECOVERY",
-          "duration_secs": 48,
-          "moving_secs": 48,
-          "start_secs": 414,
-          "end_secs": 462,
-          "avg_hr": 124,
-          "max_hr": 137,
-          "min_hr": 115,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "83s@134bpm24rpm",
-          "duration_secs": 86,
-          "moving_secs": 86,
-          "start_secs": 462,
-          "end_secs": 548,
-          "avg_hr": 127,
-          "max_hr": 140,
-          "min_hr": 116,
-          "avg_cadence": 23.186047,
-          "zone": 1
-        }
-      ],
-      "zone_basis": "hr"
     },
     {
       "activity_id": "i173937468",
@@ -1806,23 +1731,6 @@
         "reason": "retry_expired"
       }
     },
-    "i173113289": {
-      "date": "2026-08-06",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-08T08:20:33.564570",
-        "last_attempt": "2026-08-08T08:20:33.564570",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 14,
-        "first_seen": "2026-08-08T08:20:33.564570",
-        "last_attempt": "2026-08-09T14:10:25.035218",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i173937468": {
       "date": "2026-08-09",
       "intervals": {
@@ -1986,12 +1894,12 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 16,
+        "attempts": 17,
         "first_seen": "2026-08-19T08:03:36.559920",
-        "last_attempt": "2026-08-20T19:43:58.002398",
+        "last_attempt": "2026-08-21T03:30:28.940586",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-08-21T01:43:58.002398"
+        "next_retry_at": "2026-08-21T09:30:28.940586"
       }
     }
   }
