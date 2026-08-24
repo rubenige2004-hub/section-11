@@ -1,115 +1,11 @@
 {
-  "generated_at": "2026-08-23T23:40:55.070768",
+  "generated_at": "2026-08-24T00:00:41.655073",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i173937468",
-      "date": "2026-08-09",
-      "start_datetime": "2026-08-09T08:47:55",
-      "type": "Run",
-      "name": "Zaragoza Carrera",
-      "interval_summary": [
-        "6x 6m12s 145bpm",
-        "1x 2s 161bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 372,
-          "moving_secs": 372,
-          "start_secs": 0,
-          "end_secs": 372,
-          "avg_hr": 129,
-          "max_hr": 140,
-          "min_hr": 96,
-          "avg_cadence": 85.77688,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 375,
-          "moving_secs": 375,
-          "start_secs": 372,
-          "end_secs": 747,
-          "avg_hr": 142,
-          "max_hr": 147,
-          "min_hr": 138,
-          "avg_cadence": 85.290665,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 365,
-          "moving_secs": 365,
-          "start_secs": 747,
-          "end_secs": 1112,
-          "avg_hr": 145,
-          "max_hr": 154,
-          "min_hr": 138,
-          "avg_cadence": 82.523285,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 373,
-          "moving_secs": 373,
-          "start_secs": 1112,
-          "end_secs": 1485,
-          "avg_hr": 147,
-          "max_hr": 155,
-          "min_hr": 140,
-          "avg_cadence": 84.48525,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 370,
-          "moving_secs": 370,
-          "start_secs": 1485,
-          "end_secs": 1855,
-          "avg_hr": 153,
-          "max_hr": 159,
-          "min_hr": 147,
-          "avg_cadence": 84.85676,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "372s@145bpm85rpm",
-          "duration_secs": 375,
-          "moving_secs": 375,
-          "start_secs": 1855,
-          "end_secs": 2230,
-          "avg_hr": 154,
-          "max_hr": 160,
-          "min_hr": 148,
-          "avg_cadence": 85.25066,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "2s@161bpm88rpm",
-          "duration_secs": 2,
-          "moving_secs": 2,
-          "start_secs": 2230,
-          "end_secs": 2232,
-          "avg_hr": 161,
-          "max_hr": 161,
-          "min_hr": 161,
-          "avg_cadence": 88.0,
-          "zone": 2
-        }
-      ]
-    },
     {
       "activity_id": "i174281992",
       "date": "2026-08-10",
@@ -1978,23 +1874,6 @@
     }
   ],
   "fetch_state": {
-    "i173937468": {
-      "date": "2026-08-09",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-09T09:10:30.136655",
-        "last_attempt": "2026-08-09T09:10:30.136655",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 19,
-        "first_seen": "2026-08-09T09:10:30.136655",
-        "last_attempt": "2026-08-12T04:29:52.190491",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i174281992": {
       "date": "2026-08-10",
       "intervals": {
