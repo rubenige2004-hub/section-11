@@ -1,65 +1,11 @@
 {
-  "generated_at": "2026-08-28T23:45:50.951633",
+  "generated_at": "2026-08-29T00:01:02.830663",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
   "scan_hours": 72,
   "retention_days": 14,
   "activities": [
-    {
-      "activity_id": "i175824483",
-      "date": "2026-08-14",
-      "start_datetime": "2026-08-14T17:05:42",
-      "type": "Swim",
-      "name": "Nataci\u00f3n en piscina",
-      "interval_summary": [
-        "1x 200m 123bpm",
-        "1x 200m 143bpm",
-        "1x 200m 154bpm"
-      ],
-      "intervals": [
-        {
-          "type": "WORK",
-          "label": "216s@123bpm29rpm",
-          "duration_secs": 216,
-          "moving_secs": 216,
-          "start_secs": 0,
-          "end_secs": 216,
-          "avg_hr": 123,
-          "max_hr": 142,
-          "min_hr": 82,
-          "avg_cadence": 28.748768,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "239s@143bpm26rpm",
-          "duration_secs": 239,
-          "moving_secs": 239,
-          "start_secs": 216,
-          "end_secs": 455,
-          "avg_hr": 143,
-          "max_hr": 158,
-          "min_hr": 128,
-          "avg_cadence": 25.889423,
-          "zone": 1
-        },
-        {
-          "type": "WORK",
-          "label": "210s@154bpm25rpm",
-          "duration_secs": 210,
-          "moving_secs": 210,
-          "start_secs": 455,
-          "end_secs": 665,
-          "avg_hr": 154,
-          "max_hr": 177,
-          "min_hr": 129,
-          "avg_cadence": 25.009523,
-          "zone": 2
-        }
-      ],
-      "zone_basis": "hr"
-    },
     {
       "activity_id": "i175993968",
       "date": "2026-08-15",
@@ -1923,23 +1869,6 @@
     }
   ],
   "fetch_state": {
-    "i175824483": {
-      "date": "2026-08-14",
-      "intervals": {
-        "attempts": 1,
-        "first_seen": "2026-08-14T18:09:06.495849",
-        "last_attempt": "2026-08-14T18:09:06.495849",
-        "status": "ok",
-        "reason": "ok"
-      },
-      "streams": {
-        "attempts": 21,
-        "first_seen": "2026-08-14T18:09:06.495849",
-        "last_attempt": "2026-08-17T16:59:49.088926",
-        "status": "tombstone",
-        "reason": "retry_expired"
-      }
-    },
     "i175993968": {
       "date": "2026-08-15",
       "intervals": {
