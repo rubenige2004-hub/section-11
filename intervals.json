@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T09:37:25.111420",
+  "generated_at": "2026-11-11T17:25:55.532942",
   "schema_version": 1,
   "version": "3.122",
   "script_hash": "5216d761e3d0",
@@ -159,6 +159,136 @@
           "zone": 1
         }
       ]
+    },
+    {
+      "activity_id": "i208661568",
+      "date": "2026-11-11",
+      "start_datetime": "2026-11-11T10:42:54",
+      "type": "Run",
+      "name": "Zaragoza Carrera",
+      "interval_summary": [
+        "8x 6m51s 140bpm",
+        "1x 49s 140bpm"
+      ],
+      "intervals": [
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 389,
+          "moving_secs": 389,
+          "start_secs": 0,
+          "end_secs": 389,
+          "avg_hr": 135,
+          "max_hr": 148,
+          "min_hr": 107,
+          "avg_cadence": 87.10283,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 392,
+          "moving_secs": 392,
+          "start_secs": 389,
+          "end_secs": 781,
+          "avg_hr": 138,
+          "max_hr": 143,
+          "min_hr": 135,
+          "avg_cadence": 86.0102,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 396,
+          "moving_secs": 396,
+          "start_secs": 781,
+          "end_secs": 1177,
+          "avg_hr": 142,
+          "max_hr": 151,
+          "min_hr": 136,
+          "avg_cadence": 85.0,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 399,
+          "moving_secs": 399,
+          "start_secs": 1177,
+          "end_secs": 1576,
+          "avg_hr": 140,
+          "max_hr": 144,
+          "min_hr": 136,
+          "avg_cadence": 85.19549,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 395,
+          "moving_secs": 395,
+          "start_secs": 1576,
+          "end_secs": 1971,
+          "avg_hr": 143,
+          "max_hr": 147,
+          "min_hr": 140,
+          "avg_cadence": 85.410126,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 433,
+          "moving_secs": 392,
+          "start_secs": 1971,
+          "end_secs": 2404,
+          "avg_hr": 141,
+          "max_hr": 149,
+          "min_hr": 130,
+          "avg_cadence": 85.31552,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 462,
+          "moving_secs": 429,
+          "start_secs": 2404,
+          "end_secs": 2866,
+          "avg_hr": 139,
+          "max_hr": 147,
+          "min_hr": 119,
+          "avg_cadence": 75.408356,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "411s@140bpm84rpm",
+          "duration_secs": 424,
+          "moving_secs": 389,
+          "start_secs": 2866,
+          "end_secs": 3290,
+          "avg_hr": 140,
+          "max_hr": 148,
+          "min_hr": 130,
+          "avg_cadence": 84.18414,
+          "zone": 1
+        },
+        {
+          "type": "WORK",
+          "label": "49s@140bpm86rpm",
+          "duration_secs": 49,
+          "moving_secs": 49,
+          "start_secs": 3290,
+          "end_secs": 3339,
+          "avg_hr": 140,
+          "max_hr": 142,
+          "min_hr": 139,
+          "avg_cadence": 86.32653,
+          "zone": 1
+        }
+      ]
     }
   ],
   "fetch_state": {
@@ -172,12 +302,30 @@
         "reason": "ok"
       },
       "streams": {
-        "attempts": 10,
+        "attempts": 11,
         "first_seen": "2026-11-08T22:49:39.488937",
-        "last_attempt": "2026-11-11T09:37:25.111420",
+        "last_attempt": "2026-11-11T17:25:55.532942",
         "status": "pending",
         "reason": "no_data",
-        "next_retry_at": "2026-11-11T10:07:25.111420"
+        "next_retry_at": "2026-11-11T17:55:55.532942"
+      }
+    },
+    "i208661568": {
+      "date": "2026-11-11",
+      "intervals": {
+        "attempts": 1,
+        "first_seen": "2026-11-11T17:25:55.532942",
+        "last_attempt": "2026-11-11T17:25:55.532942",
+        "status": "ok",
+        "reason": "ok"
+      },
+      "streams": {
+        "attempts": 1,
+        "first_seen": "2026-11-11T17:25:55.532942",
+        "last_attempt": "2026-11-11T17:25:55.532942",
+        "status": "pending",
+        "reason": "no_data",
+        "next_retry_at": "2026-11-11T17:30:55.532942"
       }
     }
   }
